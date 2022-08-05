@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <p>hello</p>
+        <p>VueJs</p>
     </div>
 </template>
 
@@ -12,7 +12,6 @@
 
 <style scoped>
 .header{
-    height: 50px;
-    background-color: aqua;
+
 }
 </style>
