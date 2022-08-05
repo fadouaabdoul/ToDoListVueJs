@@ -1,11 +1,11 @@
 <template>
   <div class="todolist">
     <h1>To Do List with VueJs</h1>
-    <input type="text"  placeholder="what do you wanna do today?">
+    <input @keyup.enter="add" v-model="title" type="text" placeholder="what do you wanna do today?">
     <button @click="add">Add</button>
 
     <ul>
-      <li v-for="todo in todos" :key="todo.task">{{todo.task}}</li>
+      <li v-for="todo in todos" :key="todo">{{todo}}</li>
     </ul>
 
   </div>
@@ -20,13 +20,14 @@ export default {
     return {
       title: [],
       todos: [
-        { task: 'do something' }
+        'do something'
       ]
     }
   },
   methods:{
     add(){
-      this.todos.push( {});
+      this.todos.push(this.title);
+      this.title = ""
 
 
       console.log(JSON.stringify(this.todos))
