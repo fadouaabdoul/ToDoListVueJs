@@ -5,7 +5,10 @@
     <button @click="add">Add</button>
 
     <ul>
-      <li v-for="todo in todos" :key="todo">{{todo}}</li>
+      <li v-for="(todo, index) in todos" :key="todo">{{todo}}
+        <span @click="remove(index)" class="remove">X</span>
+      </li>
+
     </ul>
 
   </div>
@@ -31,7 +34,14 @@ export default {
 
 
       console.log(JSON.stringify(this.todos))
+    },
+
+    remove(index){
+
+      console.log(index)
+      this.todos.splice(index,1)
     }
+
   }
 
 
@@ -39,5 +49,11 @@ export default {
 </script>
 
 <style scoped>
+ .remove{
+   padding: .3rem .6rem;
+   cursor: pointer;
+   background-color: darkred;
+   border-radius: 40px;
+ }
 
 </style>
