@@ -1,12 +1,10 @@
 <template>
-    <div>
-        <h1>slider</h1>
-    </div>
+    <div></div>
 </template>
 
 <script>
     export default {
-        name: "sliderCarousel"
+        name: "carouselS"
     }
 </script>
 

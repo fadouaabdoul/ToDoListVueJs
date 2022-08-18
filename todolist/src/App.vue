@@ -1,24 +1,30 @@
 <template>
-    <headermain/>
-    <slider/>
-    <todolist/>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/todo">ToDoList</router-link>
+  </nav>
+  <router-view/>
 </template>
 
-<script>
-import todolist from './components/todolist.vue'
-import headermain from './components/header.vue'
-import slider from './components/slider'
-
-export default {
-  name: 'App',
-  components: {
-    todolist,
-      headermain,
-      slider
-  }
-}
-</script>
-
 <style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
 </style>
