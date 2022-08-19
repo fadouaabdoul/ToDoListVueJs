@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <carousel class="carousel" v-slot="{ currentSlide }">
-      <slide v-for="(slide, index) in carouselSlides" :key="index">
+      <slide  v-for="(slide, index) in carouselSlides" :key="index">
         <div v-show="currentSlide === index + 1" class="slide-info">
           <img :src="slide" alt="">
         </div>
@@ -45,7 +45,6 @@ export default {
     max-height: 100%;
     height: 100%;
     min-width: 100%;
-
     object-fit: cover;
   }
 
